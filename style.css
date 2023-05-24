@@ -1,0 +1,678 @@
+/************************TOUT************************/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+  
+h1{
+    color: #49a2dc;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    color: #49a2dc;
+    text-align: center;
+    justify-content: center;
+    font-size: x-large;
+    font-family: papyrus;
+    text-decoration: underline;
+}
+
+p{
+    color: #18384d;
+    justify-content: center;
+    text-align: center;
+}
+
+.bande {
+    background-color: #49a2dc;
+    padding: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 200px; /* Définit la largeur maximale de l'image */
+    height: 150px; /* Permet de conserver les proportions de l'image */
+    position: absolute; /* Position absolue pour placer l'image */
+    top: 15px; /* Distance depuis le haut de la page */
+    left: 20px; /* Distance depuis la gauche de la page */
+}
+
+.appel::before {
+    content: "";
+    left: 100%; 
+    transition: left 0.3s ease-in-out;
+}
+
+.appel {
+    position: absolute;
+    border: none;
+    top: 60px;
+    right: 250px;
+    padding: 10px;
+    background-color: #18384d;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('call.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 25px;
+    font-size: 16px;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+ 
+.appel:hover {
+    width: 150px; /* Largeur augmentée au survol */
+    background-image: none;
+}
+
+.appel:hover::before {
+    content: "+33 1 77 79 22 52";
+    position: absolute;
+    background: #18384d;
+    color: #fff;
+    padding: 10px;
+    left: 0;
+    width: 130px;
+    height: 20px;
+}
+
+.doctolib {
+    position: absolute;
+    border: none;
+    top: 60px;
+    right: 40px;
+    padding: 10px;
+    background-color: #18384d;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('doctolib.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 100px;
+    font-size: 16px;
+}
+
+.bannieres{
+    padding: 5px;
+    align-items: right;
+    float: right;
+}
+
+.bannieres li{
+    display: inline-block ; 
+    margin-right: 20px;
+    border-bottom: 2px solid #49a2dc;  
+    align-items: center;
+    width: auto;
+}
+
+.bannieres li:hover{
+    border-radius: 10px 10px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #78b9eb);
+}
+
+.bannieres a{
+    text-align: center;
+    display: block; 
+    padding: 10px ; 
+    color: #18384d;
+    text-decoration: none;
+}
+
+.titre {
+    background-color: #d4e8f5;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    font-family: segoe script;
+}
+
+.text {
+    margin-left: 40px;
+    text-align: center;
+    color: #49a2dc;
+    font-size: 60px;
+    padding-right: 20px;
+}
+
+.trait {
+    margin-left: 40px;
+    width: 68%;
+    height: 2px; 
+    background-color: #49a2dc; 
+}
+
+.content {
+    min-height: calc(100vh - 100px); /* Hauteur de la fenêtre moins la hauteur du footer */
+    padding-bottom: 100px; /* Hauteur du footer */
+}
+
+.footer {
+    text-align: center;
+}
+
+.wrapper {
+    background-color: #49a2dc;
+    min-height: 100%;
+    position: relative;
+    width: 100%; 
+    height: 175px;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper .icon {
+    position: relative;
+    background-color: #18384d;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin-bottom: 10px;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-linkedin,
+.fa-youtube{
+    color: white;
+}
+
+.wrapper .facebook:hover{
+    background: linear-gradient(rgb(0, 162, 255), rgb(50, 50, 245) );
+    color: white;
+}
+
+.wrapper .instagram:hover{
+    background: linear-gradient(200deg, rgb(76, 0, 255) 5%, rgb(165, 11, 255), rgb(255, 80, 182), rgb(255, 145, 0), yellow);
+    color: white;
+}
+
+.wrapper .linkedin:hover {
+    background-color: #007bb5;
+    color: white;
+}
+
+.wrapper .youtube:hover{
+    background: linear-gradient(180deg, rgb(221, 0, 0) 60%, rgb(136, 0, 0) );
+    color: white;
+}
+
+.wrapper .Coordo {
+    display: inline-block ; 
+    font-weight: 100;
+    display: flex;
+    align-items: self-end;
+    width: 100%;
+    justify-content: center;  
+    align-items: center;
+}
+
+.wrapper .Coordo div {
+    margin-right: 70px;
+}
+
+.wrapper .cp {
+    display: inline-block ; 
+    font-weight: 100;
+    display: flex;
+    align-items: self-end;
+    width: 100%;
+    justify-content: center;  
+    align-items: center;
+}
+
+.wrapper .cp div {
+    margin-right: 30px;
+}
+
+
+/************************ANNIMATION CHOUETTE************************/
+.athlete {
+    width: 100px;
+    height: 100px;
+    background-image: url('character.png'); /* Remplacez "character.png" par l'URL ou le chemin de votre image */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+      
+@keyframes move {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: calc(100% + 100px);
+    }
+}
+      
+
+/************************ACCUEIL************************/
+.box {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-auto-rows: 350px;
+    grid-row-gap: 100px;
+    grid-column-gap: 75px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.box a{
+    text-decoration: none ;
+    color: #49a2dc;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #49a2dc;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    justify-content: flex-end; /* Aligner le contenu en bas */
+    position: relative;
+}
+
+.box-content:hover {
+    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
+}
+
+.box-content img{
+    width: 350px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 75%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+/************************LE CABINET************************/
+.slider-container img {
+    max-width: 100%;
+    object-fit: contain; /* Ajout de la propriété */
+}
+
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #49a2dc;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+
+.menu label:hover,
+.menu label:focus {
+    background: #18384d;
+}
+
+.slide-input {
+    opacity: 0;
+}
+
+.slide-img {
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+    justify-content: center;
+    text-align: center;
+}
+
+[id^="slide"]:checked + .slide-img {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+.trouver {
+    background-color: #d4e8f5;
+    padding: 20px;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.assembler {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 0.4fr);
+    grid-auto-rows: 300px;
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.equipe {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 0.2fr);
+    grid-auto-rows: 50px;
+    grid-row-gap: 200px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 18%;
+}
+
+.equipe a{
+    text-decoration: none ;
+    color: #49a2dc;
+}
+
+.personne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #49a2dc;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    justify-content: flex-end; /* Aligner le contenu en bas */
+    position: relative;
+}
+
+.personne:hover {
+    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
+}
+
+.personne img{
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 75%;
+    margin: auto;
+    border-radius: 20px;
+    width: auto;
+    height: 130px;
+}
+
+/************************BLOGS************************/
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    border: 2px solid #49a2dc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #34739c;
+    max-width: 100%;
+    width: 350px;
+    height: 570px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.video-container video {
+    display: block;
+    border-radius: 10px;
+}
+
+
+/************************TRAITEMENTS************************/
+.traitements {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-auto-rows: 50px;
+    grid-row-gap: 350px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 18%;
+}
+
+.traitements a{
+    text-decoration: none ;
+    color: #49a2dc;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #49a2dc;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    height: 350px;
+    width: 400px;
+    justify-content: flex-end; /* Aligner le contenu en bas */
+    position: relative;
+}
+
+.categorie:hover {
+    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
+}
+
+.categorie img{
+    width: 350px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 75%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+/************************BALNEOTERAPIE************************/
+.balneotherapie {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.balneo {
+    border: 2px solid #49a2dc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #34739c;
+    max-width: 100%;
+    width: 350px;
+    height: 570px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+    margin: 0 auto;
+}
+
+.balneo video {
+    display: block;
+    border-radius: 10px;
+}
+
+/************************KINESITERAPIE************************/
+.kine {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-auto-rows: 50px;
+    grid-row-gap: 350px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 18%;
+}
+
+.kine a{
+    text-decoration: none ;
+    color: #49a2dc;
+}
+
+
+/************************PEDIATRE************************/
+.pediatrie {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-auto-rows: 50px;
+    grid-row-gap: 350px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 18%;
+}
+
+.pediatrie a{
+    text-decoration: none ;
+    color: #49a2dc;
+}
+
+.custom-list {
+    counter-reset: custom-counter; /* Réinitialise le compteur */
+    list-style: none;
+    text-align: left; /* Supprime les marqueurs par défaut de la liste */
+}
+  
+.custom-list li {
+    position: relative; /* Permet de positionner les marqueurs personnalisés */
+    counter-increment: custom-counter; /* Incrémente le compteur à chaque élément */
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+  
+.custom-list li:before {
+    content: counter(custom-counter) ".     "; /* Utilise le compteur personnalisé */
+    font-weight: bold; 
+    font-style: italic;
+    margin-right: 10px;
+    color: #18384d;
+}
+
+
+/************************DEFORMATION PIED PEDIATRE************************/
+.deformation_pied {
+    text-align: center;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+
+/************************SCOLIOSE************************/
+.scoliose {
+    text-align: center;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+/************************NEUROLOGIE************************/
+.neuro {
+    text-align: center;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+
+/************************ORTHOP2DIE ET TRAUMATOLOGIE************************/
+.ortho_trauma {
+    text-align: center;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+
+/************************KINESITHERAPIE RESPIRATOIRE************************/
+.respi {
+    text-align: center;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>BOKSS</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <script src="script.js"></script>
+        </head>
+        <body>
+            <header>
+                <div class="bande">
+                    <img src="logo.jpeg" alt="Logo BOKSS" class="logo">
+                    <button class="appel"></button>
+                    <a href="https://www.doctolib.fr/cabinet-paramedical/villiers-sur-marne/bokss">
+                        <button class="doctolib"></button>
+                    </a>
+                </div>
+            </header>
+            <div class="bannieres">
+                <li><a href="index.html" class="banniere">Accueil</a></li>
+                <li><a href="a_propos.html" class="banniere">Le cabinet</a></li>
+                <li><a href="traitement.html" class="banniere">Nos traitements</a></li>
+                <li><a href="blogs.html" class="banniere">Blogs</a></li>
+            </div> 
+            <div class="titre">
+                <div class="text">Le cabinet</div>
+                <div class="trait"></div>
+            </div>
+            <h1>Cabinet BOKSS - Balnéothérapie, ostéopathie, kinésithérapie, sport, santé</h1>
+            <p>Le Centre B.O.K.S.S Balnéo Ostéo Kiné Sport Santé vous propose tous les services de ces différentes thérapeutiques. La Balnéo, L'Ostéo, La Kiné, Le Sport Santé.</p>
+            <p>Le Masseur-Kinésithérapeute MK est le praticien en charge du renforcement musculaire, de l'endurance et de la mobilité des personnes ayant des limitations fonctionnelles. Pour cela, il pratique des mobilisations et réalise avec les patients des exercices afin de leur permettre de retrouver une meilleure condition physique.</p>
+            <div class="slider-container">
+                <div class="menu">
+                    <label for="slide-dot-1"></label>
+                    <label for="slide-dot-2"></label>
+                    <label for="slide-dot-3"></label>
+                    <label for="slide-dot-4"></label>
+                    <label for="slide-dot-5"></label>
+                    <label for="slide-dot-6"></label>
+                    <label for="slide-dot-7"></label>
+                    <label for="slide-dot-8"></label>
+                    <label for="slide-dot-9"></label>
+                </div>
+                <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+                <img class="slide-img" src="prez1.jpg">
+            
+                <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+                <img class="slide-img" src="prez2.jpg">
+            
+                <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+                <img class="slide-img" src="prez3.jpg">
+
+                <input class="slide-input" id="slide-dot-4" type="radio" name="slides" checked>
+                <img class="slide-img" src="prez4.jpg">
+            
+                <input class="slide-input" id="slide-dot-5" type="radio" name="slides">
+                <img class="slide-img" src="prez5.jpg">
+            
+                <input class="slide-input" id="slide-dot-6" type="radio" name="slides">
+                <img class="slide-img" src="prez6.jpg">
+
+                <input class="slide-input" id="slide-dot-7" type="radio" name="slides" checked>
+                <img class="slide-img" src="prez7.jpg">
+            
+                <input class="slide-input" id="slide-dot-8" type="radio" name="slides">
+                <img class="slide-img" src="prez8.jpg">
+            
+                <input class="slide-input" id="slide-dot-9" type="radio" name="slides">
+                <img class="slide-img" src="prez9.jpg">
+            </div>
+            <div class="trouver" id="localisation">
+                <h1>Nous trouver</h1>
+                <div class="assembler">
+                    <div class="map" id="map" style="width: 100%; height: 400px;"></div>
+                    <div class="acces">
+                        <p>7 Boulevard Georges Méliès, 94350 Villiers-sur-Marne</p>
+                        <p><strong>Moyens de transport:</strong></p>
+                        <p>RER - Noisy-le-Grand (Mont d'Est) (ligne A)</p>
+                        <p>RER - Gare de Bry-sur-Marne (ligne A)</p>
+                        <p>Bus - La Fontaine (lignes 120 et 520)</p>
+                        <p><strong>Informations pratiques:</strong></p>
+                        <p>Rez-de-chaussée</p>
+                        <p>Accès handicapé</p>
+                        <p>Parking gratuit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="horaires">
+                <h1>Nos horaires d'ouverture:</h1>
+                <p>Lundi : 07h00 - 20h00</p>
+                <p>Mardi : 07h00 - 20h00</p>
+                <p>Mercredi : 07h00 - 20h00</p>
+                <p>Jeudi : 07h00 - 20h00</p>
+                <p>Vendredi : 08h00 - 20h00</p>
+                <p>Samedi : FERME</p>
+                <p>Dimanche : FERME</p>
+            </div>
+            <div class="trouver" id="membres">
+                <h1>L'équipe</h1>
+                <p>Masseur-kinésithérapeute</p>
+                <div class="equipe">
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/mikhael-aboulkassimi"><div class="personne">
+                        <img src="Mikhael.webp">
+                        <div class="nom">Mikhael ABOULKASSIMI</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/louis-bisenius"><div class="personne">
+                        <img src="louis.webp">
+                        <div class="nom">Louis BISENIUS</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/neuilly-sur-seine/pierre-bosi"><div class="personne">
+                        <img src="pierre.jpg">
+                        <div class="nom">Pierre BOSI</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/sara-barroso?pid=practice-308997"><div class="personne">
+                        <img src="Mikhael.webp">
+                        <div class="nom">Sara BARROSO</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/paris/medi-dahmani?pid=practice-308997"><div class="personne">
+                        <img src="medi.webp">
+                        <div class="nom">Medi DAHMANI</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/vincent-dumas-sucy-en-brie"><div class="personne">
+                        <img src="vincent.webp">
+                        <div class="nom">Vincent DUMAS</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/thomas-floriot"><div class="personne">
+                        <img src="louis.webp">
+                        <div class="nom">Thomas FLORIOT</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/aurelien-garces"><div class="personne">
+                        <img src="Mikhael.webp">
+                        <div class="nom">Aurelien GARCES</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/wasquehal/manon-hospital"><div class="personne">
+                        <img src="manon.webp">
+                        <div class="nom">Manon HOSPITAL</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/rudy-khritian?pid=practice-308997"><div class="personne">
+                        <img src="logo.jpeg">
+                        <div class="nom">Rudy KHRISTIAN</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/vincennes/ines-leroy"><div class="personne">
+                        <img src="ines.webp">
+                        <div class="nom">Inès Leroy</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/bathie-mendes"><div class="personne">
+                        <img src="louis.webp">
+                        <div class="nom">Bathie MENDES</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/marion-meroni"><div class="personne">
+                        <img src="marion.webp">
+                        <div class="nom">Marion MERONI</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/mikhael-aboulkassimi"><div class="personne">
+                        <img src="marion.webp">
+                        <div class="nom">Sonia MAHDADI</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/camille-nguyen-thanh-ha"><div class="personne">
+                        <img src="camille.jpg">
+                        <div class="nom">Camille NGUYEN</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/raphaelle-narayanin"><div class="personne">
+                        <img src="raphaelle.webp">
+                        <div class="nom">Raphaelle NARAYANIN</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/ludwine-pascal"><div class="personne">
+                        <img src="ludwine.jpg">
+                        <div class="nom">Ludwine PASCAL</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/montreuil/thomas-picheca?pid=practice-308997"><div class="personne">
+                        <img src="thomas.webp">
+                        <div class="nom">Thomas PICHECA</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/clemence-romand"><div class="personne">
+                        <img src="Mikhael.webp">
+                        <div class="nom">Clemence ROMAND</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/villiers-sur-marne/chloe-ribeiro-leite"><div class="personne">
+                        <img src="Mikhael.webp">
+                        <div class="nom">Chloé RIBEIRO LEITE</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/champigny-sur-marne/margaux-saderne"><div class="personne">
+                        <img src="margaux.webp">
+                        <div class="nom">Margaux SADERNE</div>
+                    </div></a>
+                    <a href="https://www.doctolib.fr/masseur-kinesitherapeute/romainville/eren-uslu"><div class="personne">
+                        <img src="eren.jpg">
+                        <div class="nom">Eren USLU</div>
+                    </div></a>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="wrapper">
+                    <div class="icon facebook">
+                        <span><a href="#" class="fab fa-facebook"></a></span>
+                    </div>
+                    <div class="icon instagram">
+                        <span><a href="https://www.instagram.com/kine_bokss/?igshid=MzRlODBiNWFlZA%3D%3D" class="fab fa-instagram"></a></span>
+                    </div>
+                    <div class="icon linkedin">
+                        <span><a href="#" class="fab fa-linkedin"></a></span>
+                    </div>
+                    <div class="icon youtube">
+                        <span><a href="#" class="fab fa-youtube"></a></span>
+                    </div>
+                    <div class="Coordo">
+                        BOKSS, 7 Boulevard Georges Melies, 94 350, Villiers Sur Marne
+                    </div>
+                    <div class="cp">
+                        <div class="copyright">Copyright 2023 Institut de Kinésithérapie</div>
+                        <div class="point">.</div>
+                        <div class="mentions">Mentions légales</div>
+                        <div class="point">.</div>
+                        <div class="confidentialité">Politique de confidentialité</div>
+                    </div>
+                </div>
+            </footer> 
+            <script>
+                // Initialise la carte
+                var map = L.map('map').setView([48.836961, 2.536974], 13);
+                
+                // Ajoute une couche de tuiles (carte de base)
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                
+                // Ajoute un marqueur à l'emplacement spécifié
+                L.marker([48.836961, 2.536974]).addTo(map);
+            </script>              
+        </body>
+    </html>
