@@ -8,13 +8,13 @@ html, body {
 }
   
 h1{
-    color: #49a2dc;
+    color: #18384d;
     justify-content: center;
     text-align: center;
 }
 
 h2 {
-    color: #49a2dc;
+    color: #18384d;
     text-align: center;
     justify-content: center;
     font-size: x-large;
@@ -29,7 +29,7 @@ p{
 }
 
 .bande {
-    background-color: #49a2dc;
+    background-color: #18384d;
     padding: 90px;
     display: flex;
     align-items: center;
@@ -80,8 +80,8 @@ p{
 .appel:hover::before {
     content: "+33 1 77 79 22 52";
     position: absolute;
-    background: #18384d;
-    color: #fff;
+    background: white;
+    color: #18384d;
     padding: 10px;
     left: 0;
     width: 130px;
@@ -108,23 +108,45 @@ p{
     font-size: 16px;
 }
 
-.bannieres{
+.bannieres {
     padding: 5px;
-    align-items: right;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Ajoutez une couleur de fond appropriée si nécessaire */
+    z-index: 100;
+    width: 100%;
+  
+    /* Styles de décoration */
+    box-shadow: 0px 2px 4px #18384d; /* Ajoute une ombre à la bannière */
+    border-bottom: 1px solid #ccc; /* Ajoute une ligne de séparation en bas de la bannière */
 }
-
-.bannieres li{
-    display: inline-block ; 
+  
+.bannieres li {
+    display: inline-block;
     margin-right: 20px;
-    border-bottom: 2px solid #49a2dc;  
     align-items: center;
     width: auto;
+    position: relative;
+    z-index: 200;
 }
-
-.bannieres li:hover{
-    border-radius: 10px 10px;
-    background: linear-gradient(to bottom, #ffffff, #ffffff, #78b9eb);
+  
+.bannieres li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #18384d;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+  
+.bannieres li:hover::after {
+    transform: scaleX(1);
 }
 
 .bannieres a{
@@ -136,7 +158,7 @@ p{
 }
 
 .titre {
-    background-color: #d4e8f5;
+    background-color: #bbd0dd;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -147,16 +169,16 @@ p{
 .text {
     margin-left: 40px;
     text-align: center;
-    color: #49a2dc;
+    color: white;
     font-size: 60px;
     padding-right: 20px;
 }
 
 .trait {
     margin-left: 40px;
-    width: 68%;
+    width: 1500px;
     height: 2px; 
-    background-color: #49a2dc; 
+    background-color: white; 
 }
 
 .content {
@@ -166,10 +188,11 @@ p{
 
 .footer {
     text-align: center;
+    color: white;
 }
 
 .wrapper {
-    background-color: #49a2dc;
+    background-color: #18384d;
     min-height: 100%;
     position: relative;
     width: 100%; 
@@ -182,7 +205,7 @@ p{
 
 .wrapper .icon {
     position: relative;
-    background-color: #18384d;
+    background-color: white;
     border-radius: 50%;
     padding: 15px;
     margin: 10px;
@@ -193,7 +216,6 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     margin-bottom: 10px;
@@ -203,27 +225,27 @@ p{
 .fa-instagram,
 .fa-linkedin,
 .fa-youtube{
-    color: white;
+    color: #18384d;
 }
 
 .wrapper .facebook:hover{
     background: linear-gradient(rgb(0, 162, 255), rgb(50, 50, 245) );
-    color: white;
+    color: #18384d;
 }
 
 .wrapper .instagram:hover{
     background: linear-gradient(200deg, rgb(76, 0, 255) 5%, rgb(165, 11, 255), rgb(255, 80, 182), rgb(255, 145, 0), yellow);
-    color: white;
+    color: #18384d;
 }
 
 .wrapper .linkedin:hover {
     background-color: #007bb5;
-    color: white;
+    color: #18384d;
 }
 
 .wrapper .youtube:hover{
     background: linear-gradient(180deg, rgb(221, 0, 0) 60%, rgb(136, 0, 0) );
-    color: white;
+    color: #18384d;
 }
 
 .wrapper .Coordo {
@@ -255,85 +277,11 @@ p{
 }
 
 
-/************************ANNIMATION CHOUETTE************************/
-.athlete {
-    width: 100px;
-    height: 100px;
-    background-image: url('character.png'); /* Remplacez "character.png" par l'URL ou le chemin de votre image */
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-name: move;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-      
-@keyframes move {
-    0% {
-      left: -100px;
-    }
-    100% {
-      left: calc(100% + 100px);
-    }
-}
-      
-
-/************************ACCUEIL************************/
-.box {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 0.2fr);
-    grid-auto-rows: 350px;
-    grid-row-gap: 100px;
-    grid-column-gap: 75px;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 8%;
-}
-
-.box a{
-    text-decoration: none ;
-    color: #49a2dc;
-}
-
-.box-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #49a2dc;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    height: 400px;
-    width: 300px;
-    justify-content: flex-end; /* Aligner le contenu en bas */
-    position: relative;
-}
-
-.box-content:hover {
-    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
-}
-
-.box-content img{
-    width: 350px;
-    height: auto;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: auto;
-    border-radius: 20px;
-}
-
-
-/************************LE CABINET************************/
+/************************INDEX************************/
 .slider-container img {
     max-width: 100%;
-    object-fit: contain; /* Ajout de la propriété */
+    object-fit: contain;
+    z-index: 150;
 }
 
 .slider-container {
@@ -362,7 +310,7 @@ p{
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #49a2dc;
+    background: #18384d;
     border-radius: 50px;
     margin: 0 0.2em 1em;
 }
@@ -385,6 +333,7 @@ p{
     transition: left 0s 0.75s;
     justify-content: center;
     text-align: center;
+    z-index: 150;
 }
 
 [id^="slide"]:checked + .slide-img {
@@ -394,11 +343,28 @@ p{
 }
 
 .trouver {
-    background-color: #d4e8f5;
+    background-color: #bbd0dd;
     padding: 20px;
     align-items: center;
     margin-top: 50px;
     text-align: center;
+}
+
+.transport {
+    display: flex;
+    align-items: center;
+}
+  
+.img {
+    width: 30px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10px;
+    z-index: 150;
+}
+  
+.ok {
+    margin-right: 10px;
 }
 
 .assembler {
@@ -426,7 +392,7 @@ p{
 
 .equipe a{
     text-decoration: none ;
-    color: #49a2dc;
+    color: #18384d;
 }
 
 .personne {
@@ -434,7 +400,7 @@ p{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 2px solid #49a2dc;
+    border: 2px solid #18384d;
     background-color: #fff;
     padding: 10px;
     border-radius: 20px;
@@ -445,7 +411,7 @@ p{
 }
 
 .personne:hover {
-    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
+    box-shadow: 0 0 25px #102838; /* Couleur et taille de l'ombre */
 }
 
 .personne img{
@@ -458,6 +424,54 @@ p{
     width: auto;
     height: 130px;
 }
+
+.traitements {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-auto-rows: 50px;
+    grid-row-gap: 350px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 35%;
+}
+
+.traitements a{
+    text-decoration: none ;
+    color: #18384d;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #18384d;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    height: 350px;
+    width: 400px;
+    justify-content: flex-end; /* Aligner le contenu en bas */
+    position: relative;
+}
+
+.categorie:hover {
+    box-shadow: 0 0 25px #102838; /* Couleur et taille de l'ombre */
+}
+
+.categorie img{
+    width: 350px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 75%;
+    margin: auto;
+    border-radius: 20px;
+}
+
 
 /************************BLOGS************************/
 .presentation {
@@ -483,55 +497,6 @@ p{
 .video-container video {
     display: block;
     border-radius: 10px;
-}
-
-
-/************************TRAITEMENTS************************/
-.traitements {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 0.2fr);
-    grid-auto-rows: 50px;
-    grid-row-gap: 350px;
-    grid-column-gap: 100px;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 18%;
-}
-
-.traitements a{
-    text-decoration: none ;
-    color: #49a2dc;
-}
-
-.categorie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #49a2dc;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    height: 350px;
-    width: 400px;
-    justify-content: flex-end; /* Aligner le contenu en bas */
-    position: relative;
-}
-
-.categorie:hover {
-    box-shadow: 0 0 25px #34739c; /* Couleur et taille de l'ombre */
-}
-
-.categorie img{
-    width: 350px;
-    height: auto;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: auto;
-    border-radius: 20px;
 }
 
 
