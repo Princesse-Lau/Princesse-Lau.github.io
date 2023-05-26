@@ -116,7 +116,7 @@ p{
     top: 0;
     background-color: #fff; /* Ajoutez une couleur de fond appropriée si nécessaire */
     z-index: 100;
-    width: 100%;
+    width: 99.5%;
   
     /* Styles de décoration */
     box-shadow: 0px 2px 4px #18384d; /* Ajoute une ombre à la bannière */
@@ -276,6 +276,10 @@ p{
     margin-right: 30px;
 }
 
+.wrapper .cp a {
+    color: white;
+    text-decoration: none;
+}
 
 /************************INDEX************************/
 .slider-container img {
