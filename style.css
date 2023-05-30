@@ -173,6 +173,8 @@ img{
     align-items: center;
     margin-top: 0px;
     font-family: segoe script;
+    text-align: center;
+
 }
 
 .text {
@@ -309,6 +311,12 @@ img{
     z-index: 50;
 }
 
+.horaires {
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+}
+
 .menu {
     position: absolute;
     left: 0;
@@ -358,7 +366,7 @@ img{
 
 .trouver {
     background-color: #bbd0dd;
-    padding: 100px;
+    padding: 50px;
     align-items: center;
     text-align: center;
 }
@@ -598,51 +606,8 @@ img{
 }
 
 
-/************************DEFORMATION PIED PEDIATRE************************/
-.deformation_pied {
-    text-align: center;
-    width: 77%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-}
-
-
-/************************SCOLIOSE************************/
-.scoliose {
-    text-align: center;
-    width: 77%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-}
-
-/************************NEUROLOGIE************************/
-.neuro {
-    text-align: center;
-    width: 77%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-}
-
-
-/************************ORTHOP2DIE ET TRAUMATOLOGIE************************/
-.ortho_trauma {
-    text-align: center;
-    width: 77%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-}
-
-
-/************************KINESITHERAPIE RESPIRATOIRE************************/
-.respi {
+/************************SEANCES************************/
+.explications {
     text-align: center;
     width: 77%;
     margin: 0 auto;
