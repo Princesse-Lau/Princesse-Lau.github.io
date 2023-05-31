@@ -34,45 +34,21 @@
             <h1>Cabinet BOKSS - Balnéothérapie, ostéopathie, kinésithérapie, sport, santé</h1>
             <p>Le Centre B.O.K.S.S Balnéo Ostéo Kiné Sport Santé vous propose tous les services de ces différentes thérapeutiques. La Balnéo, L'Ostéo, La Kiné, Le Sport Santé.</p>
             <p>Le Masseur-Kinésithérapeute MK est le praticien en charge du renforcement musculaire, de l'endurance et de la mobilité des personnes ayant des limitations fonctionnelles. Pour cela, il pratique des mobilisations et réalise avec les patients des exercices afin de leur permettre de retrouver une meilleure condition physique.</p>
-            <div class="slider-container">
-                <div class="menu">
-                    <label for="slide-dot-1" ></label>
-                    <label for="slide-dot-2" ></label>
-                    <label for="slide-dot-3" ></label>
-                    <label for="slide-dot-4" ></label>
-                    <label for="slide-dot-5" ></label>
-                    <label for="slide-dot-6" ></label>
-                    <label for="slide-dot-7" ></label>
-                    <label for="slide-dot-8" ></label>
-                    <label for="slide-dot-9" ></label>
-                </div>
-                <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
-                <img class="slide-img" src="prez1.jpg">
-            
-                <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
-                <img class="slide-img" src="prez2.jpg">
-            
-                <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
-                <img class="slide-img" src="prez3.jpg">
-
-                <input class="slide-input" id="slide-dot-4" type="radio" name="slides" checked>
-                <img class="slide-img" src="prez4.jpg">
-            
-                <input class="slide-input" id="slide-dot-5" type="radio" name="slides">
-                <img class="slide-img" src="prez5.jpg">
-            
-                <input class="slide-input" id="slide-dot-6" type="radio" name="slides">
-                <img class="slide-img" src="prez6.jpg">
-
-                <input class="slide-input" id="slide-dot-7" type="radio" name="slides" checked>
-                <img class="slide-img" src="prez7.jpg">
-            
-                <input class="slide-input" id="slide-dot-8" type="radio" name="slides">
-                <img class="slide-img" src="prez8.jpg">
-            
-                <input class="slide-input" id="slide-dot-9" type="radio" name="slides">
-                <img class="slide-img" src="prez9.jpg">
+            <div class="image-gallery">
+                <img src="prez1.jpg" alt="Image 1" class="gallery-image">
+                <img src="prez2.jpg" alt="Image 2" class="gallery-image">
+                <img src="prez3.jpg" alt="Image 3" class="gallery-image">
+                <img src="prez4.jpg" alt="Image 4" class="gallery-image">
+                <img src="prez5.jpg" alt="Image 5" class="gallery-image">
+                <img src="prez6.jpg" alt="Image 6" class="gallery-image">
+                <img src="prez7.jpg" alt="Image 7" class="gallery-image">
+                <img src="prez8.jpg" alt="Image 8" class="gallery-image">
+                <img src="prez9.jpg" alt="Image 9" class="gallery-image">
             </div>
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <img id="modal-image" class="modal-content">
+            </div> 
             <div class="trouver" id="localisation">
                 <h1>Nous trouver</h1>
                 <div class="assembler">
@@ -287,18 +263,6 @@
                         <div class="confidentialité"><a href="#">Politique de confidentialité</a></div>
                     </div>
                 </div>
-            </footer>  
-            <script>
-                // Initialise la carte
-                var map = L.map('map').setView([48.836961, 2.536974], 13);
-                
-                // Ajoute une couche de tuiles (carte de base)
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '© OpenStreetMap contributors'
-                }).addTo(map);
-                
-                // Ajoute un marqueur à l'emplacement spécifié
-                L.marker([48.836961, 2.536974]).addTo(map);
-            </script>            
+            </footer>              
         </body>
     </html>
