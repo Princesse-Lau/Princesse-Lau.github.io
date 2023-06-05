@@ -17,3 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+function copyPhoneNumber() {
+  var phoneNumber = "+33 1 77 79 22 52";
+
+  // Copie le numéro de téléphone dans le presse-papiers
+  navigator.clipboard.writeText(phoneNumber);
+
+  // Affiche une alerte en haut de la page
+  var alertMessage = document.createElement('div');
+  alertMessage.classList.add('alert-message');
+  alertMessage.textContent = 'Copié';
+  document.body.appendChild(alertMessage);
+
+  // Supprime l'alerte après quelques secondes
+  setTimeout(function() {
+    alertMessage.remove();
+  }, 3000);
+}
