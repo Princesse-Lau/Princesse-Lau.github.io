@@ -2,24 +2,18 @@ document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const transitionLinks = document.getElementsByClassName('page-transition');
 
+  for (let i = 0; i < transitionLinks.length; i++) {
+    transitionLinks[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      const destinationUrl = this.href;
 
-var map = L.map('map').setView([48.836961, 2.536974], 13);
-
-// Ajoute une couche de tuiles (carte de base)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-                
-// Ajoute un marqueur à l'emplacement spécifié
-L.marker([48.836961, 2.536974]).addTo(map);
-
-
-
-const galleryImages = document.querySelectorAll('.gallery-image');
-
-galleryImages.forEach((image) => {
-  image.addEventListener('click', () => {
-    image.classList.toggle('large');
-  });
+      document.body.classList.add('fade-out');
+      setTimeout(function() {
+        window.location.href = destinationUrl;
+      }, 300); // 300ms, correspondant à la durée de la transition CSS
+    });
+  }
 });

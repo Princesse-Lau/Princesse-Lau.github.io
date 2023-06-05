@@ -20,19 +20,19 @@
                 </div>
             </header>
             <div class="bannieres">
-                <li><a href="index.html#accueil" class="banniere">Accueil</a></li>
-                <li><a href="index.html#localisation" class="banniere">Où nous trouver</a></li>
-                <li><a href="index.html#horaires" class="banniere">Horaires</a></li>
-                <li><a href="index.html#membres" class="banniere">L'équipe</a></li>
-                <li><a href="index.html#traitements" class="banniere">Nos traitements</a></li>
-                <li><a href="blogs.html" class="banniere">Blogs</a></li>
+                <li><a href="index.html#accueil" class="page-transition">Accueil</a></li>
+                <li><a href="index.html#localisation" class="page-transition">Où nous trouver?</a></li>
+                <li><a href="index.html#horaires" class="page-transition">Horaires</a></li>
+                <li><a href="index.html#membres" class="page-transition">L'équipe</a></li>
+                <li><a href="index.html#traitements" class="page-transition">Nos traitements</a></li>
+                <li><a href="blogs.html" class="page-transition">Blogs</a></li>
             </div> 
             <div class="titre" id="accueil">
                 <div class="text">Accueil</div>
                 <div class="trait"></div>
             </div>
             <h1>Cabinet BOKSS - Balnéothérapie, ostéopathie, kinésithérapie, sport, santé</h1>
-            <p>Le Centre B.O.K.S.S Balnéo Ostéo Kiné Sport Santé vous propose tous les services de ces différentes thérapeutiques. La Balnéo, L'Ostéo, La Kiné, Le Sport Santé.</p>
+            <p>Le Centre B.O.K.S.S Balnéo Ostéo Kiné Sport Santé vous propose tous les services de Balnéothérapie, L'ostéopathie, La Kinésithérapie, Le Sport Santé.</p>
             <p>Le Masseur-Kinésithérapeute MK est le praticien en charge du renforcement musculaire, de l'endurance et de la mobilité des personnes ayant des limitations fonctionnelles. Pour cela, il pratique des mobilisations et réalise avec les patients des exercices afin de leur permettre de retrouver une meilleure condition physique.</p>
             <div class="image-gallery">
                 <img src="prez1.jpg" alt="Image 1" class="gallery-image">
@@ -45,10 +45,6 @@
                 <img src="prez8.jpg" alt="Image 8" class="gallery-image">
                 <img src="prez9.jpg" alt="Image 9" class="gallery-image">
             </div>
-            <div id="modal" class="modal">
-                <span class="close">&times;</span>
-                <img id="modal-image" class="modal-content">
-            </div> 
             <div class="trouver" id="localisation">
                 <h1>Nous trouver</h1>
                 <div class="assembler">
@@ -225,15 +221,15 @@
             </div>
             <h1 id="traitements">Nos traitements</h1>
             <div class="traitements">
-                <a href="balneo.html"><div class="categorie">
+                <a href="balneo.html" class="page-transition"><div class="categorie">
                     <img src="prez9.jpg" alt="Balnéothérapie">
                     <div class="nom">Balnéothérapie</div>
                 </div></a>
-                <a href="kine.html"><div class="categorie">
+                <a href="kine.html" class="page-transition"><div class="categorie">
                     <img src="prez5.jpg" alt="kinésithérapie">
                     <div class="nom">Séance de suivie de kinésithérapie</div>
                 </div></a>
-                <a href="pediatre.html"><div class="categorie">
+                <a href="pediatre.html" class="page-transition"><div class="categorie">
                     <img src="pediatre.jpg" alt="pédiatrie">
                     <div class="nom">Consultation pédiatrie</div>
                 </div></a>
@@ -263,6 +259,28 @@
                         <div class="confidentialité"><a href="#">Politique de confidentialité</a></div>
                     </div>
                 </div>
-            </footer>              
+            </footer>   
+            <script>
+                var map = L.map('map').setView([48.836961, 2.536974], 13);
+
+                // Ajoute une couche de tuiles (carte de base)
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                
+                // Ajoute un marqueur à l'emplacement spécifié
+                L.marker([48.836961, 2.536974]).addTo(map);
+
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const galleryImages = document.getElementsByClassName('gallery-image');
+
+                    for (let i = 0; i < galleryImages.length; i++) {
+                        galleryImages[i].addEventListener('click', function() {
+                            this.classList.toggle('en-grand');
+                        });
+                    }
+                });
+            </script>           
         </body>
     </html>
